@@ -1,4 +1,4 @@
-# new_messaging_app
+# Messaging_App
 
 A simple messaging app with flutter.
 
