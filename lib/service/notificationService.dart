@@ -37,6 +37,10 @@ class NotificationService {
 
   }
 
+  void closeNotificationPayload(){
+    notificationPayload.value = null;
+  }
+
   // Request to show notification
   static Future requestNotificationPermission() async {
     PermissionStatus status = await Permission.notification.request();
@@ -48,7 +52,6 @@ class NotificationService {
 
 
   NotificationDetails notificationDetails()  {
-    print("notificationDetails entered");
     return NotificationDetails(
       android: AndroidNotificationDetails(
           'channel id',

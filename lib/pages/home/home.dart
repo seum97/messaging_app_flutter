@@ -19,14 +19,15 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
+
   @override
   void initState() {
-    print("initState entered!! ");
     // TODO: implement initState
     super.initState();
     NotificationService.notificationPayload.stream.listen(
             (payload) {
           // Navigator.pushNamed(context, event! );
+              if (payload != null)
           Navigator.pushNamed(context, '/notice_page', arguments: {'payload': payload} );
         }
     );
@@ -137,10 +138,6 @@ class _HomeState extends State<Home> {
                         "Notice Title",
                         "This is a very important notification, please read it !!",
                         '/notice_page',);
-                      // Navigator.push(context,
-                      //   MaterialPageRoute(builder: (context) =>  NotificationDestination()),
-                      // );
-
                     },
                         child: Text("Show Notification")
                     ),
