@@ -1,6 +1,6 @@
-# new_messaging_app
+# Messaging_App
 
-A new Flutter project.
+A simple messaging app with flutter.
 
 ## Getting Started
 
